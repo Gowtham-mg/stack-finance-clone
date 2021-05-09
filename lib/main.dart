@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stack_finance/screens/forgot_password.dart';
 import 'package:stack_finance/screens/login_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: ForgotPassword(),
     );
   }
 }

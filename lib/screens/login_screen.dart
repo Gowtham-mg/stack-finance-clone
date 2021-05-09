@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stack_finance/widgets/login_button.dart';
 
 enum LoginMode { Mobile, Email, Google }
 
@@ -31,6 +32,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final InputBorder emailBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(12)),
+    borderSide: BorderSide(color: Colors.grey.shade100, width: 3),
+  );
+
   LoginMode loginMode = LoginMode.Email;
   @override
   Widget build(BuildContext context) {
@@ -101,18 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  borderSide: BorderSide(color: Colors.grey.shade100, width: 3),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  borderSide: BorderSide(color: Colors.grey.shade100, width: 3),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  borderSide: BorderSide(color: Colors.grey.shade100, width: 3),
-                ),
+                border: emailBorder,
+                enabledBorder: emailBorder,
+                focusedBorder: emailBorder,
                 contentPadding: EdgeInsets.only(
                   left: _width * 0.1,
                   top: 20,
@@ -122,17 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Spacer(flex: 1),
-          // ignore: deprecated_member_use
-          FlatButton(
-            child: Text("Proceed", style: TextStyle(color: Colors.white)),
-            minWidth: _width * 0.7,
-            padding: EdgeInsets.symmetric(vertical: 15),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(25)),
-            ),
-            color: Color(0xFF2fc0ff),
-            onPressed: () {},
-          ),
+          LoginButton(width: _width, text: "Proceed", onPressed: () {}),
           Spacer(flex: 1),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -181,13 +168,14 @@ class LoginModeButton extends StatelessWidget {
     // ignore: deprecated_member_use
     return FlatButton(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          side: BorderSide(
-            color: loginMode == currentLoginMode
-                ? Color(0xFFf5fafe)
-                : Colors.grey.shade200,
-            width: 2.5,
-          )),
+        borderRadius: BorderRadius.all(Radius.circular(30)),
+        side: BorderSide(
+          color: loginMode == currentLoginMode
+              ? Color(0xFFf5fafe)
+              : Colors.grey.shade200,
+          width: 2.5,
+        ),
+      ),
       color: loginMode == currentLoginMode ? Color(0xFFf5fafe) : Colors.white,
       padding: EdgeInsets.symmetric(vertical: 10),
       child: loginMode.icon,
