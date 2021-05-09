@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stack_finance/routes.dart';
 import 'package:stack_finance/screens/forgot_password.dart';
 import 'package:stack_finance/screens/home.dart';
 import 'package:stack_finance/screens/login_screen.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      initialRoute: Routes.home,
+      onGenerateRoute: Routes.onGenerateRoutes,
     );
   }
 }

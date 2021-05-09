@@ -27,16 +27,16 @@ extension on LoginMode {
   }
 }
 
-class LoginScreen extends StatefulWidget {
+class AuthScreen extends StatefulWidget {
   final bool isSignup;
 
-  const LoginScreen({Key key, @required this.isSignup}) : super(key: key);
+  const AuthScreen({Key key, @required this.isSignup}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _AuthScreenState createState() => _AuthScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _AuthScreenState extends State<AuthScreen> {
   bool isSignup;
 
   @override

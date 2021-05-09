@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stack_finance/routes.dart';
 import 'package:stack_finance/widgets/custom_outlined_button.dart';
 import 'package:stack_finance/widgets/login_button.dart';
 
@@ -50,7 +51,13 @@ class HomeScreen extends StatelessWidget {
                   // ignore: deprecated_member_use
                   child: CustomOutlinedButton(
                     size: Size(_width * 0.9, 40),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        Routes.auth,
+                        arguments: false,
+                      );
+                    },
                     child: Text("Login", style: TextStyle(color: Colors.white)),
                     borderColor: Colors.white,
                     bgColor: Colors.transparent,
@@ -138,7 +145,13 @@ class CreateAccountOptions extends StatelessWidget {
             child: optionsButton(
               Icon(Icons.email, color: Colors.grey, size: 22),
               "Continue with Email",
-              () {},
+              () {
+                Navigator.pushNamed(
+                  context,
+                  Routes.auth,
+                  arguments: true,
+                );
+              },
             ),
           ),
           RichText(
