@@ -17,7 +17,7 @@ class LoginButton extends StatelessWidget {
     // ignore: deprecated_member_use
     return FlatButton(
       child: Text(text, style: TextStyle(color: Colors.white)),
-      minWidth: width * 0.7,
+      minWidth: width,
       padding: EdgeInsets.symmetric(vertical: 15),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(25)),
