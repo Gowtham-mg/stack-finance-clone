@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:stack_finance/screens/home.dart';
-import 'package:stack_finance/screens/loading.dart';
-import 'package:stack_finance/screens/login_screen.dart';
-import 'package:stack_finance/screens/onboarding.dart';
+import 'package:stack_finance/screens/auth/login_screen.dart';
+import 'package:stack_finance/screens/onboarding/auth_home.dart';
+import 'package:stack_finance/screens/onboarding/loading.dart';
+import 'package:stack_finance/screens/onboarding/onboarding.dart';
 
 class Routes {
   static const String auth = "/auth";
