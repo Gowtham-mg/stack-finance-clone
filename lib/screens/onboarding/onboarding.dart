@@ -21,6 +21,7 @@ class _OnboardingState extends State<Onboarding> {
   Widget pageIndicator;
 
   int page = 0;
+
   @override
   void initState() {
     controller = PageController(initialPage: 0);

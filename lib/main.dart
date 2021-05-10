@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stack_finance/routes.dart';
 import 'package:stack_finance/screens/notifications.dart';
+import 'package:stack_finance/screens/wealth.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // initialRoute: Routes.loading,
-      home: Notifications(),
+      home: Wealth(),
       onGenerateRoute: Routes.onGenerateRoutes,
     );
   }
