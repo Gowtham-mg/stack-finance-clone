@@ -32,7 +32,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             children: [
               Spacer(),
               Image.asset(
-                "assets/images/logo.jpg",
+                "assets/images/logo.png",
                 fit: BoxFit.fill,
                 height: 125,
                 width: 125,
