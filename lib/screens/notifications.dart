@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 
 class Notifications extends StatelessWidget {
   @override
@@ -44,7 +45,7 @@ class Notifications extends StatelessWidget {
                 radius: _width * 0.2,
                 backgroundColor: Colors.pink.shade100,
                 child: SvgPicture.asset(
-                  "assets/icons/bell.svg",
+                  MetaAsset.notification,
                   height: _width * 0.4,
                   width: _width * 0.4,
                   fit: BoxFit.fill,

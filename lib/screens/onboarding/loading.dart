@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/routes.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/loading_bg.jpg",
+            MetaAsset.loadingBg,
             height: _height,
             width: _width,
             fit: BoxFit.fill,
@@ -32,7 +33,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             children: [
               Spacer(),
               Image.asset(
-                "assets/images/logo.png",
+                MetaAsset.logo,
                 fit: BoxFit.fill,
                 height: 125,
                 width: 125,
@@ -53,10 +54,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                 ),
                 child: Text(
                   "Say hello to financial freedom and goodbye to financial regrets",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                   textAlign: TextAlign.center,
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/widgets/login_button.dart';
 
 class MobileNumber extends StatefulWidget {
@@ -26,7 +27,7 @@ class _MobileNumberState extends State<MobileNumber> {
         child: Column(
           children: [
             Image.asset(
-              "assets/images/forgot_password_bg.jpg",
+              MetaAsset.forgotPasswordBg,
               height: _height * 0.45,
               width: _width,
               fit: BoxFit.fill,
@@ -118,7 +119,7 @@ class _MobileNumberState extends State<MobileNumber> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10, right: 15.0),
                     child: SvgPicture.asset(
-                      "assets/icons/whatsapp.svg",
+                      MetaAsset.whatsapp,
                       height: 15,
                       width: 15,
                       fit: BoxFit.fill,
@@ -161,7 +162,7 @@ class _MobileNumberState extends State<MobileNumber> {
                     Opacity(
                       opacity: 0.3,
                       child: Image.asset(
-                        "assets/icons/onboarding_icon1.jpg",
+                        MetaAsset.trademark_icon1,
                         fit: BoxFit.fill,
                         height: 50,
                         width: 50,
@@ -181,7 +182,7 @@ class _MobileNumberState extends State<MobileNumber> {
                     Opacity(
                       opacity: 0.3,
                       child: Image.asset(
-                        "assets/icons/onboarding_icon2.jpg",
+                        MetaAsset.trademark_icon2,
                         fit: BoxFit.fill,
                         height: 50,
                         width: 50,
@@ -189,13 +190,15 @@ class _MobileNumberState extends State<MobileNumber> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0),
-                      child: Text("BSE - 40535",
-                          style: TextStyle(color: Colors.grey)),
+                      child: Text(
+                        "BSE - 40535",
+                        style: TextStyle(color: Colors.grey),
+                      ),
                     ),
                   ],
                 ),
                 Image.asset(
-                  "assets/icons/aws.png",
+                  MetaAsset.aws,
                   fit: BoxFit.fill,
                   height: 50,
                   width: 50,

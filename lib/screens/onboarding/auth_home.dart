@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/routes.dart';
 import 'package:stack_finance/widgets/custom_outlined_button.dart';
 import 'package:stack_finance/widgets/login_button.dart';
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/home_bg.jpg",
+            MetaAsset.authHomeBg,
             fit: BoxFit.fill,
             height: _height,
             width: _width,
@@ -132,7 +133,7 @@ class CreateAccountOptions extends StatelessWidget {
           ),
           optionsButton(
             SvgPicture.asset(
-              "assets/icons/google.svg",
+              MetaAsset.google,
               fit: BoxFit.fill,
               height: 22,
               width: 22,

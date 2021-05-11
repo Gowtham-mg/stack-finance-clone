@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/widgets/login_button.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -19,7 +20,7 @@ class ForgotPassword extends StatelessWidget {
           Stack(
             children: [
               Image.asset(
-                "assets/images/forgot_password_bg.jpg",
+                MetaAsset.forgotPasswordBg,
                 height: _height * 0.45,
                 width: _width,
                 fit: BoxFit.fill,

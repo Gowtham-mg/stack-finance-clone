@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 
 class Wealth extends StatelessWidget {
   final PageController controller = PageController(initialPage: 0);
@@ -23,11 +24,11 @@ class Wealth extends StatelessWidget {
         },
         effect: ExpandingDotsEffect(
           dotColor: Colors.grey,
-          activeDotColor: Colors.lightBlueAccent,
-          dotWidth: 8,
+          activeDotColor: Colors.black,
+          dotWidth: 16,
           dotHeight: 8,
-          expansionFactor: 7,
-          radius: 4,
+          expansionFactor: 4,
+          radius: 8,
           spacing: 10,
         ),
       ),
@@ -75,7 +76,7 @@ class WealthItem extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/wealth/image$page.jpg"),
+          image: AssetImage("${MetaAsset.wealthImage}$page.jpg"),
           fit: BoxFit.fill,
         ),
       ),
@@ -92,12 +93,18 @@ class WealthItem extends StatelessWidget {
                 : Column(
                     children: [
                       RotatedBox(
-                        child: Icon(Icons.double_arrow),
-                        quarterTurns: 1,
+                        child: Icon(
+                          Icons.double_arrow,
+                          color: Colors.grey,
+                        ),
+                        quarterTurns: 3,
                       ),
-                      Text(
-                        "Swipe up",
-                        style: TextStyle(color: Colors.black, fontSize: 13),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text(
+                          "Swipe up",
+                          style: TextStyle(color: Colors.black, fontSize: 13),
+                        ),
                       )
                     ],
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/widgets/login_button.dart';
 import 'package:stack_finance/widgets/navigation_widget.dart';
 
@@ -22,7 +23,7 @@ extension on LoginMode {
     } else if (this == LoginMode.Mobile) {
       return Icon(Icons.phone_iphone_rounded, color: Colors.grey.shade700);
     } else {
-      return SvgPicture.asset("assets/icons/google.svg", height: 22, width: 22);
+      return SvgPicture.asset(MetaAsset.google, height: 22, width: 22);
     }
   }
 }
@@ -299,7 +300,7 @@ class _AuthInputFieldState extends State<AuthInputField> {
                 icon: isPasswordVisible
                     ? Icon(Icons.remove_red_eye)
                     : SvgPicture.asset(
-                        "assets/icons/invisible.svg",
+                        MetaAsset.invisible,
                         height: 22,
                         width: 22,
                         fit: BoxFit.fill,

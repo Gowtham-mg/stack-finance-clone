@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/routes.dart';
 import 'package:stack_finance/widgets/login_button.dart';
 import 'package:pin_input_text_field/pin_input_text_field.dart';
@@ -15,30 +16,33 @@ class SetStackPin extends StatelessWidget {
       body: Column(
         children: [
           Image.asset(
-            "assets/images/stack-pin-bg.jpg",
+            MetaAsset.stackPinBg,
             fit: BoxFit.fill,
-            height: _height * 0.45,
+            height: _height * 0.4,
             width: _width,
           ),
-          Text(
-            "Create New Stack PIN",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 26,
-              fontWeight: FontWeight.w600,
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0, bottom: 2),
+            child: Text(
+              "Create New Stack PIN",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
           Text(
             "emailaddress@gmail.com",
             style: TextStyle(
               color: Colors.grey,
-              fontSize: 13,
+              fontSize: 14,
               fontWeight: FontWeight.w500,
             ),
           ),
           Spacer(flex: 1),
           SizedBox(
-            height: 80,
+            height: 50,
             width: _width * 0.9,
             child: PinInputTextField(
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
@@ -63,7 +67,7 @@ class SetStackPin extends StatelessWidget {
               autoFocus: true,
               decoration: BoxLooseDecoration(
                 gapSpace: 20,
-                radius: Radius.circular(22),
+                radius: Radius.circular(12),
                 textStyle: TextStyle(
                   color: Colors.black,
                   fontSize: 18,

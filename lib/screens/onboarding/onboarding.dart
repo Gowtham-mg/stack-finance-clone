@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:stack_finance/metadata/meta_asset.dart';
 import 'package:stack_finance/routes.dart';
 
 final TextStyle onboardingTitleStyle = TextStyle(
@@ -69,7 +70,7 @@ class _OnboardingState extends State<Onboarding> {
               },
               children: [
                 OnboardingItem(
-                  asset: "assets/images/onboarding1_bg.jpg",
+                  asset: MetaAsset.onboarding1Bg,
                   width: _width,
                   height: _height,
                   page: page,
@@ -90,7 +91,7 @@ class _OnboardingState extends State<Onboarding> {
                   ],
                 ),
                 OnboardingItem(
-                  asset: "assets/images/onboarding2_bg.jpg",
+                  asset: MetaAsset.onboarding2Bg,
                   width: _width,
                   height: _height,
                   page: page,
@@ -111,7 +112,7 @@ class _OnboardingState extends State<Onboarding> {
                   ],
                 ),
                 OnboardingItem(
-                  asset: "assets/images/onboarding3_bg.jpg",
+                  asset: MetaAsset.onboarding3Bg,
                   width: _width,
                   height: _height,
                   page: page,
@@ -132,7 +133,7 @@ class _OnboardingState extends State<Onboarding> {
                   ],
                 ),
                 OnboardingItem(
-                  asset: "assets/images/onboarding4_bg.jpg",
+                  asset: MetaAsset.onboarding4Bg,
                   page: page,
                   height: _height,
                   width: _width,
@@ -148,12 +149,12 @@ class _OnboardingState extends State<Onboarding> {
                     onboardingText(
                       _width,
                       "Stack is AMFI registered ARN holder: 171554",
-                      "assets/icons/onboarding_icon1.jpg",
+                      MetaAsset.trademark_icon1,
                     ),
                     onboardingText(
                       _width,
                       "Stack uses BSE mutual funds platform with member code: 40535",
-                      "assets/icons/onboarding_icon2.jpg",
+                      MetaAsset.trademark_icon2,
                     ),
                   ],
                 ),
